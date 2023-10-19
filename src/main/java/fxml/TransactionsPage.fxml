@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="371.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml_controller.TransactionsPage">
+   <children>
+      <TableView fx:id="incomeTable" layoutX="35.0" layoutY="70.0" prefHeight="200.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="incomeNameCol" onEditCommit="#incomeNameEdited" prefWidth="115.0" text="Name" />
+          <TableColumn fx:id="incomeDescriptionCol" onEditCommit="#incomeDescriptionEdited" prefWidth="115.0" text="Description" />
+            <TableColumn fx:id="incomeIncomeCol" onEditCommit="#incomeIncomeEdited" prefWidth="69.0" text="Income" />
+        </columns>
+      </TableView>
+      <TableView fx:id="expenseTable" layoutX="370.0" layoutY="70.0" prefHeight="200.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="expenseNameCol" onEditCommit="#expenseNameEdited" prefWidth="115.0" text="Name" />
+          <TableColumn fx:id="expenseDescriptionCol" onEditCommit="#expenseDescriptionEdited" prefWidth="115.0" text="Description" />
+            <TableColumn fx:id="expenseExpenseCol" onEditCommit="#expenseExpenseEdited" prefWidth="69.0" text="Expense" />
+        </columns>
+      </TableView>
+      <Label layoutX="160.0" layoutY="28.0" text="Incomes">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="28.0" text="Expenses">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="incomeNameTxtField" layoutX="35.0" layoutY="270.0" prefHeight="25.0" prefWidth="115.0" promptText="Name" />
+      <TextField fx:id="incomeDescTxtField" layoutX="150.0" layoutY="270.0" prefHeight="25.0" prefWidth="115.0" promptText="Description" />
+      <TextField fx:id="incomeIncomeTxtField" layoutX="265.0" layoutY="270.0" prefHeight="25.0" prefWidth="69.0" promptText="Income" />
+      <TextField fx:id="expenseNameTxtField" layoutX="370.0" layoutY="270.0" prefHeight="25.0" prefWidth="115.0" promptText="Name" />
+      <TextField fx:id="expenseDescTxtField" layoutX="485.0" layoutY="270.0" prefHeight="25.0" prefWidth="115.0" promptText="Description" />
+      <TextField fx:id="expenseExpenseTxtField" layoutX="600.0" layoutY="270.0" prefHeight="25.0" prefWidth="69.0" promptText="Expense" />
+      <Button fx:id="incomeAddBtn" layoutX="265.0" layoutY="295.0" mnemonicParsing="false" onAction="#incomeAddBtnPressed" prefHeight="25.0" prefWidth="69.0" text="Add" />
+      <Button fx:id="expenseAddBtn" layoutX="600.0" layoutY="295.0" mnemonicParsing="false" onAction="#expenseAddBtnPressed" prefHeight="25.0" prefWidth="69.0" text="Add" />
+      <Button fx:id="incomeRemoveBtn" layoutX="35.0" layoutY="295.0" mnemonicParsing="false" onAction="#IncomeRemoveBtnPressed" prefHeight="25.0" prefWidth="69.0" text="Remove" />
+      <Button fx:id="expenseRemoveBtn" layoutX="370.0" layoutY="295.0" mnemonicParsing="false" onAction="#expenseRemoveBtnPressed" prefHeight="25.0" prefWidth="69.0" text="Remove" />
+      <Button fx:id="backBtn" layoutX="323.0" layoutY="332.0" mnemonicParsing="false" onAction="#backBtnPressed" prefHeight="25.0" prefWidth="60.0" text="Back" />
+   </children>
+</AnchorPane>

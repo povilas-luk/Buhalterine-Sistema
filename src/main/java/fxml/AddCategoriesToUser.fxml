@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="135.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml_controller.AddCategoriesToUser">
+   <children>
+      <ListView fx:id="listView" layoutX="15.0" layoutY="40.0" prefHeight="80.0" prefWidth="200.0" />
+      <TextField fx:id="userSearchTextField" layoutX="15.0" layoutY="15.0" onKeyReleased="#textFieldKeyPressed" prefHeight="25.0" prefWidth="150.0" promptText="Search" />
+      <Button fx:id="addBtn" layoutX="165.0" layoutY="15.0" mnemonicParsing="false" onAction="#addBtnClicked" prefHeight="25.0" prefWidth="50.0" text="Add" />
+   </children>
+</AnchorPane>
